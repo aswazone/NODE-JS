@@ -1,0 +1,3 @@
+[submodule "Local-module"]
+	path = Local-module
+	url = https://github.com/aswazone/Node-js--local-module-.git
