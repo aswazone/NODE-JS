@@ -10,4 +10,15 @@ emitter.on("order-pizza",()=> {//event name (order-pizza) same aayirikkyanmh
 
 // track the event or emit the event
 //there will be a emit to track the event
+
 emitter.emit("order-pizza");//ingane ezhudhanamh...emit n sheshamhh on
+//there will be a listener on
+
+// with para meter
+emitter.on("order-pizza",(size,topping)=> {
+    console.log(`Order is received!! ${size} with ${topping}`);
+})
+
+// track the event or emit the event
+//there will be a emit to track the event
+emitter.emit("order-pizza","large","cheesy");//ingane ezhudhanamh...emit n sheshamhh on
