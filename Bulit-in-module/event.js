@@ -3,7 +3,7 @@ const EventEmitter = require("node:events");
 // emiter enna oru object Class n vendi indakki
 const emitter = new EventEmitter();
 
-//there will be a listener on
+//there will be a listener on to register the method
 emitter.on("order-pizza",()=> {//event name (order-pizza) same aayirikkyanmh
     console.log("Order is received!!");
 })
