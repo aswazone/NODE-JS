@@ -47,11 +47,15 @@
 
 //PIZZA SHOP modified---------------------------------------------------------------------------
 const Pizzashop = require("./pizza-shop");
+const Drinkmachine = require("./drink-machine");
+
 
 const pizzashop = new Pizzashop();
+const drinkMachine = new Drinkmachine();
 
 pizzashop.on("order-pizza",(size,topping)=>{
     console.log(`Order is received!! A ${size} Pizza with ${topping}`);
+    drinkMachine.serveDrink(size);
 });
 
 pizzashop.order("large","cheesy");
