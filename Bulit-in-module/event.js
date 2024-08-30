@@ -1,10 +1,4 @@
-const Pizzashop = require("./pizza-shop");
 
-const pizzashop = new Pizzashop();
-
-pizzashop.order();
-pizzashop.order();
-pizzashop.displayOrderNumber();
 
 // // EventEmitter is a class requires from the node:events
 // const EventEmitter = require("node:events");
@@ -30,3 +24,35 @@ pizzashop.displayOrderNumber();
 // // track the event or emit the event
 // //there will be a emit to track the event
 // emitter.emit("order-pizza","large","cheesy");//ingane ezhudhanamh...emit n sheshamhh on
+
+
+//PIZZA SHOP____________________________________________________________
+
+// const Pizzashop = require("./pizza-shop");
+
+// const pizzashop = new Pizzashop();
+
+
+// pizzashop.order();
+// pizzashop.order();
+// pizzashop.displayOrderNumber();
+
+// const Pizzashop = require("./pizza-shop");
+
+// const pizzashop = new Pizzashop();
+
+
+// pizzashop.order();
+// pizzashop.order();
+
+//PIZZA SHOP modified---------------------------------------------------------------------------
+const Pizzashop = require("./pizza-shop");
+
+const pizzashop = new Pizzashop();
+
+pizzashop.on("order-pizza",(size,topping)=>{
+    console.log(`Order is received!! A ${size} Pizza with ${topping}`);
+});
+
+pizzashop.order("large","cheesy");
+pizzashop.displayOrderNumber();
