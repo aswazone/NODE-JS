@@ -7,11 +7,11 @@ const readableStream = fs.createReadStream("./file.txt",{//ivide file.txt read c
 
 const writeableStream = fs.createWriteStream("./file2.txt");
 
-//mukalil ninnulla functionte data chunks lekk kerumh
-// readableStream.on("data",(chunk)=>{
-//     console.log(chunk);
-//     writeableStream.write(chunk);//chunks nnere file2.txt il write cheyummh
-// })
+// mukalil ninnulla functionte data chunks lekk kerumh
+readableStream.on("data",(chunk)=>{
+    console.log(chunk);
+    writeableStream.write(chunk);//chunks nnere file2.txt il write cheyummh
+})
 
 // mukalilullathinu pagarmh easy... PIPE concept use cheyyamh..-------------------------------------------------------------------
 
